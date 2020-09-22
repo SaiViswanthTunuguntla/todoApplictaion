@@ -38,7 +38,6 @@ export class TodoListComponent implements OnInit {
 
   updateTodo(id:number){
     this.router.navigate(['todos',id]);
-
   }
   deleteTodo(id:number)
   {
