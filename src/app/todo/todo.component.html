@@ -1,0 +1,27 @@
+<p>todo works!</p>
+
+<div>
+    <form (ngSubmit)="saveTodo()" #todoForm="ngForm">
+          <label>Description</label>
+          <input type="text" #description="ngModel" 
+                [(ngModel)]="todo.task" class="form-control"
+                    name="description" required="required" minlength="5">
+<!--     
+        <fieldset class="form-group">
+            <label>Target Date</label>
+            <input type="date" #targetDate="ngModel"
+            [ngModel]="todo.targetDate | date:'yyyy-MM-dd' "
+            (ngModelChange)="todo.targetDate = $event"
+            class="form-control" name="targetDate" required="required" >
+        </fieldset> -->
+        <fieldset class="form-group">
+
+        <label>isDone</label>
+        <input type="checkbox" #isdone="ngModel" 
+        [(ngModel)]="todo.done" name="isdone">
+        </fieldset>
+        <button type="submit" class="btn btn-success">Save</button>
+      </form>  
+
+
+</div>
